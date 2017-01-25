@@ -54,13 +54,6 @@ object ViewOutstandingFeedbackSpec : Spek({
                     feedback.size.should.equal(0)
                 }
             }
-
-            context("Team member has one item of feedback") {
-                beforeGroup {
-
-                    executeViewOutstandingFeedback(id=1)
-                }
-            }
         }
 
     }

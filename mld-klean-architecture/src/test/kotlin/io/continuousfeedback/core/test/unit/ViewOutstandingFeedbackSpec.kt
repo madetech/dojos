@@ -22,8 +22,6 @@ class ViewOutstandingFeedbackSpec : SubjectSpek<ViewOutstandingFeedback>({
                     feedback = f
                 }
 
-                override fun presentError(error: Presenter.Error) {
-                }
             })
         }
         it("should return no feedback") {
@@ -38,9 +36,6 @@ class ViewOutstandingFeedbackSpec : SubjectSpek<ViewOutstandingFeedback>({
             subject.execute(Request(teamMemberId = 1), object : Presenter {
                 override fun presentFeedback(f: List<OutstandingFeedback>) {
                     feedback = f
-                }
-
-                override fun presentError(error: Presenter.Error) {
                 }
 
             })
@@ -61,8 +56,6 @@ class ViewOutstandingFeedbackSpec : SubjectSpek<ViewOutstandingFeedback>({
                     feedback = f;
                 }
 
-                override fun presentError(error: Presenter.Error) {
-                }
             })
         }
         it("should return multiple items of feedback") {
