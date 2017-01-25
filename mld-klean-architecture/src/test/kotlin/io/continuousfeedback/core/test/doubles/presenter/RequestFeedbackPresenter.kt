@@ -8,3 +8,5 @@ class RequestFeedbackPresenter(val onNotify: (Presenter.Notification) -> Unit,
     override fun presentNotification(notification: Presenter.Notification) = onNotify(notification)
     override fun presentError(error: Presenter.Error) = onError(error)
 }
+
+
