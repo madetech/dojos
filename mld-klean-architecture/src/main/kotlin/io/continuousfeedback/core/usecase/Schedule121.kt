@@ -3,7 +3,6 @@ package io.continuousfeedback.core.usecase
 import com.madetech.clean.usecase.AsynchronousUseCase
 import io.continuousfeedback.core.usecase.Schedule121.Presenter
 import io.continuousfeedback.core.usecase.Schedule121.Request
-import java.util.*
 
 interface Schedule121 : AsynchronousUseCase<Request, Presenter> {
     data class Request(val teamMemberId: Int, val date: String)
@@ -11,6 +10,6 @@ interface Schedule121 : AsynchronousUseCase<Request, Presenter> {
     interface Presenter {
         data class OneToOne(val teamMemberId: Int, val date: String)
 
-        fun onSuccess()
+        fun onSuccess(teamMemberId: Int, date: String)
     }
 }

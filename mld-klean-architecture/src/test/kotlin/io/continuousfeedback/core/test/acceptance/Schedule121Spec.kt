@@ -12,7 +12,8 @@ object Schedule121Spec : Spek({
     val continuousFeedback: ContinuousFeedback = InMemoryContinuousFeedback()
 
     describe("schedule a 121 at a specific time") {
-        var successAddingScheduled121:Boolean = false
+        var successTeamMemberId : Int = 0
+        var successDate : String = ""
 
         fun executeCreateTeamMember(email: String) {
             continuousFeedback.executeUseCase(
@@ -29,8 +30,9 @@ object Schedule121Spec : Spek({
                     Schedule121::class,
                     Schedule121.Request(teamMemberId, date),
                     object : Schedule121.Presenter {
-                        override fun onSuccess() {
-                            successAddingScheduled121 = true
+                        override fun onSuccess(teamMemberId : Int, date : String) {
+                            successTeamMemberId = teamMemberId
+                            successDate = date
                         }
                     }
             )
@@ -43,7 +45,12 @@ object Schedule121Spec : Spek({
             context("when you schedule a 121") {
                 val date = "2017-01-31"
                 beforeGroup { executeSchedule121(1, date) }
-                it("should return true") { successAddingScheduled121.should.be.equal(true) }
+                it("should be assigned to the team member")  { successTeamMemberId.should.be.equal(1) }
+                it("should have a date")  { successDate.should.be.equal(date) }
+
+                it("saves") {
+                    continuousFeedback.oneToOneGateway.find(1)!!.date.should.be.equal(date)
+                }
             }
         }
     }
