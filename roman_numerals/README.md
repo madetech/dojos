@@ -13,6 +13,8 @@ Based on [the Roman Numerals kata](http://agilekatas.co.uk/katas/RomanNumerals-K
 10 => X
 40 => XL
 100 => C
+500 => D
+1000 => M
 ```
 
 ## Format
