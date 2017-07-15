@@ -18,3 +18,59 @@ Write some code that keeps track of the score of a bowling game. It should suppo
 
 - roll(pins) is called each time a player rolls the ball; Pins is the number of pins knocked down.
 - score() is called at the end of the game and returns the score of the game
+
+## Examples
+
+```
+ ---- ----
+| X  | Y  |
+ ---- ---- 
+     | Z  |
+      ----
+X - Roll 1
+Y - Roll 2
+Z - Score so far
+```
+### Example 1 - Rolling a spare
+
+Rolling: 5, 5, 5, 4
+
+Total Score: 24
+
+```
+ ---- ----    ---- ----
+| 5  | /  |  | 5  | 4  |
+ ---- ----    ---- ----
+     | 15 |       | 24 |
+      ----         ----
+```
+
+### Example 2 - Rolling a strike
+
+Rolling: 10, 5, 4
+
+Total Score: 28
+
+```
+ ---- ----    ---- ----
+| X  |    |  | 5  | 4  |
+ ---- ----    ---- ----
+     | 19 |       | 28 |
+      ----         ----
+```
+
+### Example 3 - Rolling two stikes
+
+Rolling: 10, 10, 5, 4
+
+Total Score: 53
+
+```
+ ---- ----    ---- ----    ---- ---- 
+| X  |    |  | X  |    |  | 5  | 4  |
+ ---- ----    ---- ----    ---- ---- 
+     | 25 |       | 44 |       | 53 |
+      ----         ----         ---- 
+```
+
+
