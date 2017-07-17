@@ -73,4 +73,47 @@ Total Score: 53
       ----         ----         ---- 
 ```
 
+## The final frame (frame 10)
 
+The final frame acts differently to any other frame in the occurence of either a strike or a spare. 
+
+If < 10 pins are knocked down in the two turns of the frame, everything is as usual. 
+
+If the player gets a spare, they get an extra roll. This roll, however, is not added onto the overall score by itself but used to calculate the full value of the spare. 
+
+If the player gets a strike, they get two extra rolls. As with the spare these are only used to calculate the full value of the strike. 
+
+### Example 1 - A spare
+
+Starting score: 100 
+
+Rolling: 5, 5, 5
+
+Total Score: 115
+```
+ ---- ----   ---- ---- ----
+| .. | .. | | 5  | /  | 5  |
+ ---- ----   ---- ---- ----
+     | 100|           | 115|
+      ----             ----
+```
+
+Note: **Not** 120 (15 from the spare + 5 from the extra roll)
+
+### Example 2 - A strike
+
+Starting score: 100
+
+Rolling: 10, 5, 5
+
+Total Score 120
+
+```
+ ---- ----   ---- ---- ----
+| .. | .. | | X  | 5  | 5  |
+ ---- ----   ---- ---- ----
+     | 100|           | 120|
+      ----             ----
+```
+
+Note: **Not** 130 (20 from the strike + (2x5) from the extra rolls)
