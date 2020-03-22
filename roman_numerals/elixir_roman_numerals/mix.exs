@@ -4,7 +4,7 @@ defmodule ElixirRomanNumerals.Mixfile do
   def project do
     [app: :elixir_roman_numerals,
      version: "0.1.0",
-     elixir: "~> 1.4",
+     elixir: "~> 1.3.1",
      build_embedded: Mix.env == :prod,
      start_permanent: Mix.env == :prod,
      deps: deps()]
